@@ -1,6 +1,5 @@
 baseURL = 'http://jordanielder.com/'
 languageCode = 'en-us'
 title = "JorDaniElder"
-theme = "m10c"
 [author]
   name = 'Jordan'
