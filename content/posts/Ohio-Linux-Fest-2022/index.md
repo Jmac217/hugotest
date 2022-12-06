@@ -62,7 +62,7 @@ There's a grand sense of community between all of the large and small businesses
 # Hallway Track
 Bumping elbows with everyone in the hallway track alone is well worth the all-night drive back to St Louis for anyone who's on the fense next year.
 
-![he hotel was beautiful, and jinx the scuba cat loves it](images/jinx-nginx.jpg)
+![the hotel was beautiful, and jinx the scuba cat loves it](images/jinx-nginx.jpg)
 
 ![One of One Photos of Downtown Columbus from My Hotel Room](images/OLF-Night.jpg)
 
