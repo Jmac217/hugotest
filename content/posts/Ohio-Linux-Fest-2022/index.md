@@ -5,7 +5,7 @@ Special thanks to President of the OLF Organization [Beth Eicher](https://olfcon
 15 people from the JB audience met at [North Market](https://northmarket.org/), a food Court containing "Ohio’s best independent merchants, farmers, and makers". which had everything from Vegan to Ramen to Pizza to BBQ
 Joined by   
 * Nev, the beav, retromat, losten, ScorchedMuffin, jonathon bowman
-from the Matrix chat
+from the Matrix chat... Somehow I forgot to mention Carl George from RedHat how could I forget. All the RedHatters were inspiring.
 
 ![Jupiter Broadcasting Community Meetup](images/JB-Community-OLF-2022.jpg)
 

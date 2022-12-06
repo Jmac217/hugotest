@@ -1,6 +1,0 @@
-baseURL = 'http://jordanielder.com/'
-languageCode = 'en-us'
-title = 'jordanielder.com'
-theme = 'terminal'
-[author]
-  name = 'Jordan'
