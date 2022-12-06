@@ -35,5 +35,5 @@ paginate = 5
         url = "https://www.youtube.com/@jmac217x/"
       [[languages.en.menu.main]]
         identifier = "mastodon"
-        name = "Mastodon"
+        name = "z) Connect on Mastodon"
         url = "https://fosstodon.org/@Jordanielder"
