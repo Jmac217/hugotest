@@ -30,6 +30,6 @@ paginate = 5
         name = "RSS"
         url = "/index.xml"
       [[languages.en.menu.main]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
+        identifier = "youtube"
+        name = "YouTube"
+        url = "https://www.youtube.com/@jmac217x/"
