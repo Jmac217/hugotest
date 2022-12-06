@@ -37,7 +37,7 @@ Raffled off many goodies including [2 Pi 400s and 16 Pi Picos](https://olfconfer
 ![OLF Speaker Carl George](images/OLF-Raffle.jpg)
 
 # [Freedom and Beer! Thanks Sponsors!](https://olfconference.org/sponsors/)
-Free Coffee, Local Beers and Tacos sponsored by VIQ Open Logic and The Linux Foundation
+Free Coffee, Local Beers and Tacos sponsored by CIQ Open Logic and The Linux Foundation
 plus I got a picture with a life-size R2D2 from a neighboring "galaxy fest" going on at the same time
 
 ![Jmac217 and R2-D2](images/Jmac217-R2D2.jpg)
