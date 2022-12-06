@@ -24,12 +24,12 @@ paginate = 5
       logoText = "Jor-Dani-Elder"
       logoHomeLink = "/"
 
-#   [languages.en.menu]
-#     [[languages.en.menu.main]]
-#       identifier = "about"
-#       name = "About"
-#       url = "/about"
-#     [[languages.en.menu.main]]
-#       identifier = "showcase"
-#       name = "Showcase"
-#       url = "/showcase"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "index"
+        name = "RSS"
+        url = "/index.xml"
+      [[languages.en.menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
