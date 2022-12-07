@@ -38,3 +38,7 @@ paginate = 5
         identifier = "mastodon"
         name = "Mastodon"
         url = "https://fosstodon.org/@Jordanielder"
+      [[languages.en.menu.main]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/Jmac217"
