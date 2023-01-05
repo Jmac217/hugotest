@@ -1,5 +1,5 @@
 +++
-title = "Index"
+title = "Angular CLI Up And Running with Docker and Podman"
 date = "2023-01-04T23:04:46-06:00"
 author = ""
 authorTwitter = "" #do not include @
