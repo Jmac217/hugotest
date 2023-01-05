@@ -103,4 +103,6 @@ ng build
 ng serve
 ```
 
-There's a lot more you can do once you get to this point, such as going on to link a Database and building out a portable Angular dev environment, but the main point of this article was to introduce Podman as a Development tool. I plan on continuing on with podman to build environments for other programming languages in the future.
+There's a lot more you can do once you get to this point, such as going on to link a Database and building out a portable Angular dev environment, but the main point of this article was to introduce Podman as a Development tool. I plan on continuing on with podman to build environments for other programming languages in the future.  
+
+![Angular-2-Podman](images/angular2-podman.png)
