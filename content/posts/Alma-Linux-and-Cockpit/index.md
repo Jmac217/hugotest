@@ -25,7 +25,7 @@ color = "" #color from the theme settings
 ##### My go-to for Linux is old school [DD](https://www.geeksforgeeks.org/dd-command-linux/) (do be careful with that one if you're unfamiliar with DD maybe avoid it)
 
 ### Installing Cockpit on AlmaLinux
-##### To Install Cockpit on AlmaLinux requires the [Extra Packages for Enterprise Linux (EPEL) repository]() to be enabled. To do so, run the following commands:  
+##### To Install Cockpit on AlmaLinux requires the [Extra Packages for Enterprise Linux (EPEL) repository](https://docs.fedoraproject.org/en-US/epel/) to be enabled. To do so, run the following commands:  
 ```
 sudo dnf update
 sudo dnf install epel-release
