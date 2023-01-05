@@ -8,9 +8,9 @@ tags = ["Angular-2", "Podman", "Docker"]
 keywords = ["Angular-2", "Podman", "Docker"]
 description = "Quickly initialize Angular CLI with Podman or Docker"
 showFullContent = false
-readingTime = false
+readingTime = true
 hideComments = false
-color = "blue" #color from the theme settings
+color = "" #color from the theme settings
 +++
 
 ### [Podman](https://podman.io/) is a tool for managing and running [containerized applications](https://www.ibm.com/topics/containerization) on [Linux](https://en.wikipedia.org/wiki/Linux) and uses a command-line interface to create and manage containers directly, without the need for a [daemon process](https://en.wikipedia.org/wiki/Daemon_(computing)). It can access various container registries, including [Docker Hub](https://hub.docker.com/), to store and distribute images used to create containers.
