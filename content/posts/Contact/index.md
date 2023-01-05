@@ -1,19 +1,19 @@
 +++
-title = "Contact Jordan"
+title = "Contact Jordan Elder for Tech Services"
 date = "2022-12-01T12:00:00-01:00"
 author = ""
 authorTwitter = "" #do not include @
 cover = "images/eldertechservices.png"
 tags = ["Contact", "Support"]
 keywords = ["Contact", "Support", "Sales"]
-description = "Contact Jordan Elder in a number of ways"
+description = "Reach me in a number of ways for a variety of services!"
 showFullContent = true
 readingTime = false
 hideComments = false
 color = "" #color from the theme settings
 +++
 
-# Contact Jordan Elder
+# Contact Jordan Elder for Tech Services
 
 I'm available for freelance operations, development, and design work or just to invite to a gig!  
 Be sure to check out the [band]() if you made it this far!  
