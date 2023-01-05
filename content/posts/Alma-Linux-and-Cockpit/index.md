@@ -13,8 +13,6 @@ hideComments = false
 color = "" #color from the theme settings
 +++
 
-![AlmaLinux + Cockpit](images/cockpit.png)
-
 ## [AlmaLinux](https://almalinux.org/)
 ### A Community-driven, free enterprise-grade distribution of Red Hat Enterprise Linux, or RHEL for short.
 
@@ -40,4 +38,4 @@ sudo dnf install cockpit
 sudo systemctl enable --now cockpit.socket
 ```
 
-### From Cockpit you can now easily manage everything from your [firewall rules](https://firewalld.org/) to your [podman](https://podman.io/) containers and more!
+###  From Cockpit you can now easily manage everything from your [firewall rules](https://firewalld.org/) to your [podman](https://podman.io/) containers and more!
