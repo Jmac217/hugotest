@@ -40,6 +40,8 @@ color = "" #color from the theme settings
 ##### **The description headers are hyperlinks to each project's website*
 ##### **Descriptions provided by ChatGPT*
 
+[Here's the quick video I shot for this post](https://www.youtube.com/watch?v=QqRck5c8eRs)
+
 I've used all of these softwares to varying degrees. Some as long as 15 years (GIMP) others I came across today (Laigter). In this article I will attempt to recap what I believe are the most important parts of [DevLogLogan](https://www.youtube.com/watch?v=VjuyfBaryu8)'s tutorial video putting all of the pieces I've known together in one package. Though his video is 25 minutes, I paused and followed closely along the way, and by the end of the project I spent just under 3 hours creating and designing and putting all the pieces together for myself; an invaluable experience.
 
 ### Krita
