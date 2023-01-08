@@ -1,7 +1,19 @@
++++
+title = "OLF 2022 Recap"
+author = ""
+authorTwitter = "" #do not include @
+cover = "images/OLF-Crew.jpg"
+tags = ["OLF", "Linux"]
+keywords = ["Ohio", "Linux", "Fest"]
+description = "The OLF Organization, led by President Beth Eicher, Vice President Warner Moore, and Chairman Vance Kochenderfer, along with other volunteer organizers, put on a successful event. Keynote speakers Amber Graner and John 'Mad Dog' Hall shared their thoughts on inclusivity in technology communities. Around 15 individuals from the Jupiter Broadcasting audience met at the North Market food court, which offers a variety of dining options including vegan, ramen, pizza, and BBQ."
+showFullContent = false
+readingTime = true
+hideComments = false
+color = "" #color from the theme settings
++++
+
 # Thanks OLF Organization
 Special thanks to President of the OLF Organization [Beth Eicher](https://olfconference.org/about/staff/), Vice President [Warner Moore](https://olfconference.org/about/staff/), Chairman [Vance Kochenderfer](https://olfconference.org/about/staff/) and the rest of the [volunteer organizers](https://olfconference.org/about/staff/) for making the event warm and welcoming, and keynote speakers [Amber Graner](https://olfconference.org/speakers/), and [John 'Mad Dog' Hall](https://olfconference.org/speakers/) spoke to being inclusive of all humans in our technology communities
-
-![OLF Crew](images/OLF-Crew.jpg)
 
 # Jupter Broadcasting Faces and Handles
  15 or probably more like 10 people from the JB audience met at [North Market](https://northmarket.org/), a food Court containing "Ohio’s best independent merchants, farmers, and makers". which had everything from Vegan to Ramen to Pizza to BBQ
