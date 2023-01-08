@@ -37,10 +37,12 @@ color = "" #color from the theme settings
 ## [GIMP](https://www.gimp.org/)
 >GIMP (GNU Image Manipulation Program) is a powerful, open source image editor that is perfect for both beginners and professionals. With a wide range of tools and features, GIMP is well-equipped for tasks such as photo retouching, image composition, and image authoring. Its user-friendly interface makes it easy to get started, and its support for a wide range of file formats means you can work with just about any type of image. Whether you are looking to touch up your photos or create original artwork, GIMP has something to offer. Give it a try and see how it can help you bring your creative vision to life.
 
-##### **The description headers are hyperlinks to each project's website*
-##### **Descriptions provided by ChatGPT*
+**The description headers are hyperlinks to each project's website*
+**Descriptions provided by ChatGPT*
 
 [Here's the quick video I shot for this post](https://www.youtube.com/watch?v=QqRck5c8eRs)
+
+### Introduction
 
 I've used all of these softwares to varying degrees. Some as long as 15 years (GIMP) others I came across today (Laigter). In this article I will attempt to recap what I believe are the most important parts of [DevLogLogan](https://www.youtube.com/watch?v=VjuyfBaryu8)'s tutorial video putting all of the pieces I've known together in one package. Though his video is 25 minutes, I paused and followed closely along the way, and by the end of the project I spent just under 3 hours creating and designing and putting all the pieces together for myself; an invaluable experience.
 
@@ -72,7 +74,7 @@ I've used Blender for many projects throughout 2022. Before that I made around a
 
 There's a ton of stuff I could go on about with this section, but what's important is that once all the geometry is lined up it needs to be exported as `*.glb` file extension from Blender to be used with Godot, as seen in the [video](https://www.youtube.com/watch?v=VjuyfBaryu8&t=1204s).
 
-##### Static body definitions provided by ChatGPT
+Static body definitions provided by ChatGPT
 
 ![Blender](images/blender.png)
 
