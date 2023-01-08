@@ -15,7 +15,7 @@ color = "" #color from the theme settings
 # Thanks OLF Organization
 Special thanks to President of the OLF Organization [Beth Eicher](https://olfconference.org/about/staff/), Vice President [Warner Moore](https://olfconference.org/about/staff/), Chairman [Vance Kochenderfer](https://olfconference.org/about/staff/) and the rest of the [volunteer organizers](https://olfconference.org/about/staff/) for making the event warm and welcoming, and keynote speakers [Amber Graner](https://olfconference.org/speakers/), and [John 'Mad Dog' Hall](https://olfconference.org/speakers/) spoke to being inclusive of all humans in our technology communities
 
-# Jupter Broadcasting Faces and Handles
+# Jupiter Broadcasting Faces and Handles
  15 or probably more like 10 people from the JB audience met at [North Market](https://northmarket.org/), a food Court containing "Ohio’s best independent merchants, farmers, and makers". which had everything from Vegan to Ramen to Pizza to BBQ
 Joined by   
 * Nev
