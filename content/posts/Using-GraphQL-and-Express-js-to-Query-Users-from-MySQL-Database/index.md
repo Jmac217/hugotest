@@ -33,7 +33,7 @@ We'll get into what exactly these technologies are, but first I want to explain 
 
 >**[Docker](https://www.docker.com/)** is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. By doing so, Docker aims to eliminate the "works on my machine" problem.
 
->**[Podman](https://podman.io/)** is a tool used to run and manage containers, similar to Docker. It allows developers to easily package and deploy applications in lightweight containers, making it easier to manage and deploy applications in different environments. Podman is a standalone tool, meaning it does not require a daemon to run, making it more secure and efficient than Docker.
+>**[Podman](https://podman.io/)** is a tool used to run and manage containers, which should work in every way that Docker does to my knowlege. It allows developers to easily package and deploy applications in lightweight containers, making it easier to manage and deploy applications in different environments. Podman is a standalone tool, meaning it does not require a daemon to run, making it more secure and efficient than Docker.
 
 # Now let's just dive in, shall we?
 
@@ -45,7 +45,7 @@ first things first is adding installing the NPM dependencies:
 >The `--force` flag tells npm to install the packages even if there are conflicts with already-installed packages. This can be useful if you want to overwrite an existing installation of a package. I had package conflicts and this is the dirty way to deal with them.
 
 ---------------------------------------------------------------------------
-Now the real first step is planning... Let's stop and think. We are going to set up a GraphQL server using Express.js and connect it to a MariaDB database using the mysql library. There's a few things to not about that setup going in: First we're using podman to create two containers, one for our GraphiQL app and the other for the MariaDB database; and next the containers will be deployed with `podman-compose`. There is one caveat that will be brushed over later. I'm manually inserting information into the MariaDB database for this post. It is possible to go on and add something like [PHPMyAdmin](https://www.phpmyadmin.net/) to manage the database operations.
+Now the real first step is planning... Let's stop and think. We are going to set up a GraphQL server using Express.js and connect it to a MariaDB database using the mysql library. There's a few things to note about that setup going in: First we're using podman to create two containers, one for our GraphiQL app and the other for the MariaDB database; and next the containers will be deployed with `podman-compose`. There is one caveat that will be brushed over later. I'm manually inserting information into the MariaDB database for this post. It is possible to go on and add something like [PHPMyAdmin](https://www.phpmyadmin.net/) to manage the database operations.
 
 Copy the following `Dockerfile` to build out the image that will then be linked in the `docker-compose` step.
 
@@ -220,7 +220,7 @@ and re-running:
 Now that our containers are up we can check `localhost:4000/graphql` in a web browser to see that ou GraphiQL instance is up and running, but we need to first insert our user information into the database to be retrieved by a GraphQL query. To do that I opted for a raw MySQL method. To follow me through these steps first run:  
 
 `podman ps`  
-to find your containers name, for me it's the column at the furthest right, under the header called `NAMES`
+to find your containers name, for me it's the column at the furthest right, under the header called `NAMES` like in the above image.
 
 using that name run the following command to start a MySQL connection from within the container:
 
@@ -302,5 +302,3 @@ and if everything goes right for you, you'll see..!
 This project was quite the journey! Firstly used `NPM`, the default package manager for `Node.js`, to install the required dependencies for our `app` This included the `mysql` library, which we used to connect to the MariaDB database, and the `express-graphql` library, which allows us to use `GraphQL` with `Express.js`. We really started things off by setting up a `Dockerfile` to initialize the `Node.js` container named `my-app`. Then we created two files `server.js`, and `schema.js` to run our `Express server` which hosts the `GraphQL API` that we defined that GraphQL `schema.js` file and finally built and linked in the `MariaDB` database through a `docker-compose.yml` configuration. Fueled up our `MariaDB` with some mock-up `users`, John and Jane, and used a `GraphQL query` to pull their info from the database!
 
 Overall, working with `Podman` and setting up a `docker-compose` file was a great way to manage the different components of our project and make sure everything was running correctly. And using `NPM` to install the necessary packages for our server made it easy to get everything set up and running. It was definitely a learning experience, but in the end, we were able to get everything working and have a fully functional `GraphQL API`!
-
-One thing I wanted to point out in the way I've been thinking about Docker and GraphQL is that Docker works a lot like DNS, the system that maps human-readable domain names to IP addresses. Just as DNS allows you to access websites using friendly names like "google.com" instead of raw IP addresses, Docker allows you to access your app's containers using friendly names like "db" or "app" instead of raw IP addresses. This makes it easier to work with multiple containers and microservices. Thinking of it like this has helped me further enrich the experience of working with Podman.
