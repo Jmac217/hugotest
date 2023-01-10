@@ -1,5 +1,5 @@
 +++
-title = "Using GraphQL and Express.js to Query Users from MySQL Database"
+title = "Using GraphQL and Express.js to Query Users from a MySQL Database"
 date = "2023-01-09T20:54:30-06:00"
 author = ""
 authorTwitter = "" #do not include @
@@ -37,15 +37,15 @@ We'll get into what exactly these technologies are, but first I want to explain 
 
 # Now let's just dive in, shall we?
 
-first things first is adding installing the NPM dependencies:  
+Once you have [node.js](https://nodejs.org/en/) installed and either [Docker](https://www.docker.com/) or [Podman](https://podman.io/) up and running you're ready to insall the NPM dependencies:
 `npm install --save express express-graphql graphql mysql --force`  
 
 >The `--save` flag tells npm to save these packages as dependencies in your project's `package.json` file. This is useful because it allows other people to easily install all of the required dependencies for your project by running npm install, and in this case it is what we are using to install the proper packages to the container image.
 
 >The `--force` flag tells npm to install the packages even if there are conflicts with already-installed packages. This can be useful if you want to overwrite an existing installation of a package. I had package conflicts and this is the dirty way to deal with them.
 
----------------------------------------------------------------------------
-Now the real first step is planning... Let's stop and think. We are going to set up a GraphQL server using Express.js and connect it to a MariaDB database using the mysql library. There's a few things to note about that setup going in: First we're using podman to create two containers, one for our GraphiQL app and the other for the MariaDB database; and next the containers will be deployed with `podman-compose`. There is one caveat that will be brushed over later. I'm manually inserting information into the MariaDB database for this post. It is possible to go on and add something like [PHPMyAdmin](https://www.phpmyadmin.net/) to manage the database operations.
+# The *real* first step is planning...
+Let's stop and think. We are going to set up a GraphQL server using Express.js and connect it to a MariaDB database using the mysql library. There's a few things to note about that setup going in: First we're using podman to create two containers, one for our GraphQL app and the other for the MariaDB database; and next the containers will be deployed with `podman-compose`. There is one caveat that will be brushed over later. I'm manually inserting information into the MariaDB database for this post. It is possible to go on and add something like [PhpMyAdmin](https://www.phpmyadmin.net/) to manage the database operations.
 
 Copy the following `Dockerfile` to build out the image that will then be linked in the `docker-compose` step.
 
@@ -98,8 +98,7 @@ Finally, the `CMD` instruction specifies the command to run when the image is ru
 
 We're going to need just two Javascript files for this project: a `server.js` and a `schema.js`
 
-`server.js`
-
+>`server.js`
 ```javascript
 const express =         require('express');
 const { graphqlHTTP } = require('express-graphql');
@@ -138,10 +137,12 @@ app.listen(4000, () => {
     console.log('Listening for GraphQL requests on http://localhost:4000/graphql');
 });
 ```
+For `server.js` we pull in the required modules for our app, `express`, `express-graphql`, `mysql`, and our `./schema.js` file, and go on to create a promise for the `pool.query` to pass in the `mysql`: `SELECT * FROM users` when GraphQL is asked for `Users`. Then we set the [Environment Variables](https://en.wikipedia.org/wiki/Environment_variable) into the container image The root object contains the resolver functions for the GraphQL API. In this case, there is only one resolver function: `users`. The `users` resolver function accepts an args object as an argument, which contains the arguments passed to the user field in the `GraphQL` query. In this case, the args object contains an `id` field, which is used to specify the user to retrieve from our database. Then we set `app = express()` to initialize our express app, and set our endpoint to `/graphql` and to listen on port `4000`. One thing to note is that setting `graphiql: true` ensures that we can run GraphiQL in the the web browser.
 
-and
 
-`schema.js`  
+and next up is our [Express-GraphQL Schema](https://graphql.org/graphql-js/running-an-express-graphql-server/)
+
+>`schema.js`  
 ```javascript
 const { buildSchema } = require('graphql');
 
@@ -160,9 +161,6 @@ const schema = buildSchema(`
 
 module.exports = schema;
 ```
-
-For `server.js` we pulled in the required modules for our app, `express`, `express-graphql`, `mysql`, and our `./schema.js` file, and go on to create the pool to pass [Environment Variables](https://en.wikipedia.org/wiki/Environment_variable) into the container image The root object contains the resolver functions for the GraphQL API. In this case, there is only one resolver function: `users`. The `users` resolver function accepts an args object as an argument, which contains the arguments passed to the user field in the `GraphQL` query. In this case, the args object contains an `id` field, which is used to specify the user to retrieve from our database. Then we set `app = express()` to initialize our express app, and set our endpoint to `/graphql` and to listen on port `4000`. One thing to note is that setting `graphiql: true` ensures that we can run GraphiQL in the the web browser.
-
 For `schema.js` it pulls in the required `graphql` module and sets the schema for which GraphQL will be able to query. For our example we have will provide a database that holds a `users` table with an auto-incrementing `id` field along with `name`, and `email` varchar fields, which looks like this:
 ```
 +----+------------+------------------+
@@ -217,7 +215,7 @@ and re-running:
 
 # But we're not done yet!
 
-Now that our containers are up we can check `localhost:4000/graphql` in a web browser to see that ou GraphiQL instance is up and running, but we need to first insert our user information into the database to be retrieved by a GraphQL query. To do that I opted for a raw MySQL method. To follow me through these steps first run:  
+Now that our containers are up we can check `localhost:4000/graphql` in a web browser to see that our GraphiQL instance is up and running, but we need to first insert our user information into the database to be retrieved by a GraphQL query. To do that I opted for a raw MySQL method. To follow me through these steps first run:  
 
 `podman ps`  
 to find your containers name, for me it's the column at the furthest right, under the header called `NAMES` like in the above image.
