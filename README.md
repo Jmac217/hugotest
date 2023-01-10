@@ -1,4 +1,4 @@
-![Elder Tech Services](https://raw.githubusercontent.com/Jmac217/hugotest/main/content/posts/Contact/images/eldertechservices.png)
+![Elder Tech Services](https://raw.githubusercontent.com/Jmac217/hugotest/main/content/posts/Contact/images/eldertechservices-wide.png)
 
 # JORDANIELDER.COM
 Welcome to my personal projects blog! Here you will find articles on various topics related to DevOps, Linux, Programming, continuous integration and delivery, infrastructure as code, and cloud computing.
