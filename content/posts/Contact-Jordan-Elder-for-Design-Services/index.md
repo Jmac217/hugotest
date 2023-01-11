@@ -1,6 +1,6 @@
 +++
 title = "Contact Jordan Elder for Design Services"
-date = "2023-01-11T02:54:14-06:00"
+date = "2022-12-01T12:00:00-01:00"
 author = ""
 authorTwitter = "" #do not include @
 cover = "images/eldertechservices-3.png"
