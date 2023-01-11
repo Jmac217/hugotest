@@ -13,9 +13,9 @@ hideComments = false
 color = "" #color from the theme settings
 +++
 
-# Jordan Elder has been in the space of Graphic Design for 15 years
+# Jordan Elder has been in Graphic Design for 15 years
 
-Whether you need an ad, thumbnail, business card, web banner, emote or logo I can help you bring your ideas to life.
+Whether you need an **ad**, **thumbnail**, **business card**, **web banner**, **emote** or **logo** I can help you bring your ideas to life.
 
 * [Email](mailto:jordanelder10@gmail.com)
 * [Mastodon](https://fosstodon.org/@Jordanielder)
@@ -26,7 +26,7 @@ Whether you need an ad, thumbnail, business card, web banner, emote or logo I ca
 
 ## Here are a few highlights of my design work using Gimp, Blender, and other design tools:  
 
-> Product accomodations made for internal use at a previous company  
+> Product accomodations made for internal use at a previous company - 2021  
 ![product](images/product.png)
 
 > Profile Icon made for Discord  
@@ -36,14 +36,14 @@ Whether you need an ad, thumbnail, business card, web banner, emote or logo I ca
 > Side-Bars/Panels for OBS Streaming  
 ![panels](images/panels.png)
 
-> Restraunt Menu for my favorite restraunt which is no longer around, The Whistle Stop  
+> Restraunt Menu for my favorite restraunt which is no longer around, The Whistle Stop - 2012  
 ![menu1](images/menu1.png)
 ![menu2](images/menu2.png)
 
 > Album Art for On All Sides - Ghosted  
 ![album](images/album.png)
 
-> Web Banner for Midwestern Japanese Learners  
+> Web Banner for Midwestern Japanese Learners - 2020  
 ![japanese](images/japanese.png)
 
 > Discord emote for my emote server  
