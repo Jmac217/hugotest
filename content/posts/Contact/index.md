@@ -18,6 +18,8 @@ color = "" #color from the theme settings
 I'm available for freelance operations, development, and design work or just to invite to a gig!  
 Be sure to check out the [band]() if you made it this far!  
 
+If you're interested in my design work, check out the [Gallery](/posts/available-for-graphic-design).
+
 * [Email](mailto:jordanelder10@gmail.com)
 * [Mastodon](https://fosstodon.org/@Jordanielder)
 * [YouTube](https://www.youtube.com/@jmac217x)
