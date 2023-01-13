@@ -16,9 +16,8 @@ color = "" #color from the theme settings
 # Contact Jordan Elder for Tech Services
 
 I'm available for freelance operations, development, and design work or just to invite to a gig!  
-Be sure to check out the [band]() if you made it this far!  
 
-If you're interested in my design work, check out the [Gallery](/posts/available-for-graphic-design).
+If you're interested in my design work, check out the [Gallery](/posts/contact-jordan-elder-for-design-services).
 
 * [Email](mailto:jordanelder10@gmail.com)
 * [Mastodon](https://fosstodon.org/@Jordanielder)
@@ -27,4 +26,4 @@ If you're interested in my design work, check out the [Gallery](/posts/available
 * [imgur](https://imgur.com/user/Jmac217)
 * [On All Sides (Band)](https://www.youtube.com/@onallsides8083)
 
-Be sure to come back from time to time, I will keep posting here as long as there's still words to write!
+Be sure to come back from time to time, and check out the [band](https://www.youtube.com/@onallsides8083), I will keep posting here as long as there's still words to write!
