@@ -51,19 +51,21 @@ I've been looking at Vulkan from afar for 6 months while I honed my C++ skills a
 
 I sat down about ~~8 hours ago~~ yesterday, now at the time of finishing the post, thinking this might not be so bad, and in some ways it's not *that bad*, but comparing it to everything I've done till now, it is the *hardest thing* I've had to comprehend in programming. What makes a Triangle less than simple in Vulkan is that by simply starting a Vulkan project you're signing up for plenty of up-front thinking through the architecture of what you're building as well as filling in the fields that Vulkan expects of Graphical Applications both small and massive. The tried and true OpenGL was pretty dang quick to get up and running and gave you a sense of *"I can do this!"*, but then at every turn there was something to add to your API, and if you didn't know it was coming it could derail your project to the point of no return. Having gone through a few of the stumbling points with OpenGL I had *some* idea of what I was getting into with Vulkan, but not nearly enough to think twice about sitting down with it tonight. **TL;DR: Vulkan forces you to double check your vision before stepping into the pitfalls you'll surely encounter with OpenGL.**
 
+All of the content from this post summarizes the first 6 videos of [Brendan Galea's](https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR) Vulkan Game Engine YouTube Series.
+
 ---
 
 # Pre-requisites {#PreRequisites}
 This must be the longest list of pre-requisites I've seen in a post, let-alone a post I wrote, but it's all of the things you need to get going on Fedora Linux *version 37 at the time of writing this*.
 
 # The Material {#Material}
-I didn't set out to follow a tutorial, but I absolutely had to, and everyone recommended [Brendan Galea's Vulkan Game Engine Tutorial] over the last few months of casually looking into this. I decided that it was going to be the quickest way to get up and running in a manner that would allow me to continue learning and would align with my overall plans for Vulkan, which is to incorporate it into an game engine for myself to learn with.
+I didn't set out to follow a tutorial, but I absolutely had to, and everyone recommended [Brendan Galea's Vulkan Game Engine Tutorial](https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR) over the last few months of casually looking into this. I decided that it was going to be the quickest way to get up and running in a manner that would allow me to continue learning and would align with my overall plans for Vulkan, which is to incorporate it into an game engine for myself to learn with.
 
-I'm going to use Brendan's tutorial as reference for some of the points I talk about, but mostly I'm going to make his process more specific to Linux and even more specifically Fedora. Fedora makes for a great workstation, so that's where I've been spending my last few months.
+I'm going to use [Brendan's tutorial](https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR) as reference for some of the points I talk about, but mostly I'm going to make his process more specific to Linux and even more specifically Fedora. Fedora makes for a great workstation, so that's where I've been spending my last few months.
 
 # Download These And Make Edits Accordingly {#Download}
 
-He has 4 files hosted that you'll need to download and follow his short instructions on what to change in those files, these links will take you to the timestamp in the videos, as well as to the download location within the description of the videos.
+[Brendan](https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR) has 4 files hosted that you'll need to download and follow his short instructions on what to change in those files, these links will take you to the timestamp in the videos, as well as to the download location within the description of the videos.
 
 * [lve_device.cpp & lve_device.hpp](https://www.youtube.com/watch?v=LYKlEIzGmW4&t=94s)
 * [lve_swap_chain.cpp & lve_swap_chain.hpp](https://www.youtube.com/watch?v=IUYH74MqxOA&t=194s)
@@ -587,7 +589,7 @@ I didn't go as far as incorporating the shader compilation step into the `CMakeL
 
 The GLFW window we wrote is about to get Vulkanized, and this page is going to start looking like [GitHub](https://github.com/Jmac217/Vulkan-Starter-Engine)!  
 
-As He Stated in the tutorial, there's a lot of extra boilerplate that gets in the way and does not need to be thought about at this stage. By following the tutorial beyond the point of this triangle example
+As Brendan Stated in the [tutorial](https://youtu.be/LYKlEIzGmW4?t=94), there's a lot of extra boilerplate that gets in the way and does not need to be thought about at this stage. By following the tutorial beyond the point of this triangle example
 
 There are 4 files to download from the tutorial and at very least the namespace will need to be changed to `jde` in those downloads. It's not proper etiquate to link directly to those files, and you should watch those parts of the videos anyway to really see what to change in the files.  
 
@@ -1272,4 +1274,4 @@ the last line says `Built target Vulkan-Starter` is what matters, that's our bin
 ```
 
 
-![](images/triangle-window.png)
+![Hello-Vulkan-Triangle](images/triangle-window.png)
