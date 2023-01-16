@@ -258,7 +258,7 @@ int main()
     return 0;
 }
 ```
-> `"main.cpp"`: This is just a simple introduction to the world of Vulkan graphics programming! Ultimately this file should open a GLFW window.
+This is just a simple introduction to the world of Vulkan graphics programming! Ultimately this file should open a GLFW window.
 
 * Our entrypoint starts by initializing the `GLFW` library, which we use to create a window that will serve as the canvas for our Vulkan graphics. We then specify that we want to use the *Vulkan client API*, and create a window with a width of 800 pixels, a height of 600 pixels, and the title "Vulkan Window".
 
@@ -358,7 +358,8 @@ note that we are including `jde_window.hpp` in the header in this file; the head
 
 ### The `JdeWindow` Class {#JdeWindow}
 
->"`jde_window.hpp`": is our window class `JdeWindow`, its constructor takes a `w`, `h`, and a `name` which are used to initialize the `width`, `height`, and `name` of the window. We properly handle the available constructors, and the destructor destroys the window and terminates GLFW. The class has *deleted `copy constructor` and copy `assignment operator`*, which means that instances of this class cannot be copied. This is where our `game loop` is requested to terminate. `JdeWindow` has a public method called `shouldClose()`, which returns a bool indicating whether the window has been closed or not. Finally there is also one private method `initWindow()` that actually initializes the window. The private variables store width, height, and the name of the GLFW window.
+# `jde_window.hpp`
+
 ```cpp
 #pragma once
 
@@ -388,6 +389,50 @@ namespace jde {
     };
 }
 ```
+this is our window class `JdeWindow`, its constructor takes a `w`, `h`, and a `name` which are used to initialize the `width`, `height`, and `name` of the window. We properly handle the available constructors, and the destructor destroys the window and terminates GLFW. The class has *deleted `copy constructor` and copy `assignment operator`*, which means that instances of this class cannot be copied. This is where our `game loop` is requested to terminate. `JdeWindow` has a public method called `shouldClose()`, which returns a bool indicating whether the window has been closed or not. Finally there is also one private method `initWindow()` that actually initializes the window. The private variables store width, height, and the name of the GLFW window.
+
+# `jde_window.cpp`
+
+```cpp
+// jde_window.cpp
+
+#include "jde_window.hpp"
+
+namespace jde {
+
+    JdeWindow::JdeWindow(int w, int h, std::string name):
+        width{w}, height{h}, windowName{name}
+    {
+        initWindow();
+    }
+
+    JdeWindow::~JdeWindow()
+    {
+        glfwDestroyWindow(window);
+        glfwTerminate();
+    }
+
+    void JdeWindow::initWindow()
+    {
+        glfwInit();
+        glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+
+        window = glfwCreateWindow(width, height, windowName.c_str(), nullptr, nullptr);
+    }
+}
+```
+* `jde_window.cpp` code starts by including the `jde_window.hpp` header file, which contains declarations for the `JdeWindow` class.
+* our namespace `jde` is defined.
+* The `JdeWindow` class is defined, which has a constructor that takes in three parameters: `width`, `height`, and a *string* `name`.
+* In the `constructor`, the input parameters are assigned to the *member variables* of the class. Then the function `initWindow()` is called.
+* A `destructor` is defined, which is called when the `JdeWindow` object is destroyed. It destroys the window and terminates `GLFW`.
+* The `initWindow()` function is defined, which initializes `GLFW` and sets some *window hints*.
+* The `GLFW` library is initialized.
+* The `GLFW_CLIENT_API` hint is set to `GLFW_NO_API` to indicate that no graphics API is used
+* The `GLFW_RESIZABLE` hint is set to `GLFW_FALSE` to indicate that the window is *not resizable*
+* A *window* is created with the specified `width`, `height` and `name`.
+* The *window pointer* is assigned to the window member variable.
 
 ### Making Entry in `main.cpp`! {#main}
 > We now get to hit the `run()` command we saw very first! This is the `main()` function of the application, which is the entry point of our window! 
