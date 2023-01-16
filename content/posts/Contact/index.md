@@ -17,7 +17,7 @@ color = "" #color from the theme settings
 
 I'm available for freelance operations, development, and design work or just to invite to a gig!  
 
-If you're interested in my design work, check out the [Gallery](/posts/gallery).
+If you're interested in my design work, check out the [Gallery](/posts/gallery/).
 
 * [Email](mailto:jordanelder10@gmail.com)
 * [Mastodon](https://fosstodon.org/@Jordanielder)

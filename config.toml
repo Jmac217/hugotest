@@ -49,7 +49,7 @@ paginate = 5
       [[languages.en.menu.main]]
         identifier = "contact"
         name = "Contact"
-        url = "/posts/Contact"
+        url = "/posts/Contact/"
       [[languages.en.menu.main]]
         identifier = "linkedin"
         name = "LinkedIn"
@@ -57,4 +57,4 @@ paginate = 5
       [[languages.en.menu.main]]
         identifier = "gallery"
         name = "Gallery"
-        url = "/posts/gallery"
+        url = "/posts/gallery/"
