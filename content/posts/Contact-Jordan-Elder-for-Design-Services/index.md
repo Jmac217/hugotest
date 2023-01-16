@@ -26,6 +26,96 @@ Whether you need an **ad**, **thumbnail**, **business card**, **web banner**, **
 
 ## Here are a few highlights of my design work using Gimp, Blender, and other design tools:  
 
+>Donkey Kong Gif Made with TV Panels and a CRT filter
+![DKPanel](images/DKPanel.gif)
+
+>Cinemagraph
+![TakoStand](images/TakoStand.gif)
+
+>YouTube Thumbnail
+![DKC2Thumb](images/DKC2Thumb.png)
+
+>Games Library Collage
+![games-collage-1](images/games-collage-1.jpg)
+![games-collage-2](images/games-collage-2.jpg)
+
+>Penguin lake edit
+![PenguinLake](images/PenguinLake.png)
+
+>Game Concept
+![RobotEnteringCavern](images/RobotEnteringCavern.png)
+
+>Eidolon In-Game Photography
+![eidolon-1](images/eidolon-1.jpg)
+![eidolon-2](images/eidolon-2.jpg)
+![eidolon-3](images/eidolon-3.jpg)
+![eidolon-4](images/eidolon-4.jpg)
+![eidolon-5](images/eidolon-5.jpg)
+![eidolon-6](images/eidolon-6.jpg)
+
+>Sandbag art
+![sandbag](images/sandbag.png)
+
+>Dino art
+![dino](images/dino.png)
+
+>Gif Transformations
+![stoked](images/stoked.gif)
+![WaffleStruckDuck](images/WaffleStruckDuck.gif)
+
+>Reddit Edit
+![TheFaceoff](images/TheFaceoff.jpg)
+
+>Before On All Sides there was a Wildcat Demo
+![Wildcat](images/Wildcat.png)
+
+>Blender projects from 2013
+![cup](images/cup.png)
+![soccerball](images/soccerball.png)
+![poolballs](images/poolballs.png)
+![planet](images/planet.png)
+![mug](images/mug.png)
+![bowl](images/bowl.png)
+![clock](images/clock.png)
+![chain](images/chain.png)
+![bear](images/bear.png)
+
+>Cowboy Bebop edits
+![spike-1](images/spike-1.jpg)
+![spike-2](images/spike-2.jpg)
+
+>Space Dandy Edit
+![dandy](images/dandy.jpg)
+
+>memes
+![shwag](images/shwag.jpg)
+![cloud](images/cloud.png)
+
+>Photoshop battles from 2014
+![psbattle-1](images/psbattle-1.jpg)
+![psbattle-2](images/psbattle-2.jpg)
+![psbattle-3](images/psbattle-3.jpg)
+
+>Zelda OOT in-game screenshot wallpaper
+![dungeon](images/dungeon.png)
+
+>Kentucky Route Zero In-Game Screenshots/Wallpapers
+![KRZ-1](images/KRZ-1.png)
+![KRZ-2](images/KRZ-2.jpg)
+![KRZ-3](images/KRZ-3.jpg)
+![KRZ-4](images/KRZ-4.jpg)
+![KRZ-5](images/KRZ-5.png)
+![KRZ-6](images/KRZ-6.jpg)
+![KRZ-7](images/KRZ-7.jpg)
+![KRZ-8](images/KRZ-8.jpg)
+![KRZ-9](images/KRZ-9.jpg)
+![KRZ-10](images/KRZ-10.jpg)
+![KRZ-11](images/KRZ-11.png)
+![KRZ-12](images/KRZ-12.jpg)
+
+>Halloween Logo for On All Sides
+![pumpkin](images/pumpkin.gif)
+
 > Product accomodations made for internal use at a previous company - 2021  
 ![product](images/product.png)
 
