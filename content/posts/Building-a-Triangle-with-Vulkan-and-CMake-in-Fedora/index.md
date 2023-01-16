@@ -1,5 +1,5 @@
 +++
-title = "Building a Triangle with Vulkan and CMake in Fedora 37"
+title = "Building a Triangle with Vulkan and C++ in Fedora 37"
 date = "2023-01-14T18:23:21-06:00"
 author = ""
 authorTwitter = "" #do not include @
@@ -14,6 +14,37 @@ color = "" #color from the theme settings
 fullWidthTheme = true
 +++
 
+# Navigation
+* [Beginning the Journey](#Beginning)
+* [Pre-requisites](#PreRequisites)
+* [The Material](#Material)
+* [Downloading The Boilerplate](#Download)
+* [VulkanSDK](#VulkanSDK)
+* [DNF](#DNF)
+* [CMake](#CMake)
+* [Testing Vulkan](#Test)
+* [Starting Line](#StartingLine)
+* [Window Notes](#Moves)
+* [Initial Directory Structure](#Notes)
+* [Vulkan Window](#Window)
+* [FirstApp Class](#FirstApp)
+* [JdeWindow Class](#JdeWindow)
+* [Main Function](#main)
+* [Launching the Window](#Open)
+* [The Hard Part](#HardPart)
+* [Full Directory Structure](#TriDir)
+* [Shader Chain](#ShaderChain)
+* [Shader Compilation](#ShaderCompile)
+* [Starting The Triangle](#Triangle)
+* [Revamped first_app.hpp](#FirstTriangleHpp)
+* [Revamped first_app.cpp](#FirstTriangleCpp)
+* [Graphics Pipeline Configuration jde_pipeline.hpp](#PipelineHpp)
+* [Graphics Pipeline Configuration jde_pipeline.cpp](#PipelineCpp)
+* [Revamped jde_window.hpp](#WindowHpp)
+* [Revamped jde_window.cpp](#WindowCpp)
+* [Build The Triangle](#BuildTriangle)
+* [Launch The Triangle!](#Launch)
+
 # Beginning the Journey {#Beginning}
 
 I've been looking at Vulkan from afar for 6 months while I honed my C++ skills and worked through SFML, GLFW, and OpenGL, along with a few windowing frameworks like ImGui and GTK3, but all of that work just barely prepared me for this most arduous of tasks... The legendary Vulkan Triangle! Settle in, this is going to take some time to even read through, let alone work through!
@@ -22,20 +53,22 @@ I sat down about ~~8 hours ago~~ yesterday, now at the time of finishing the pos
 
 ---
 
+# Pre-requisites {#PreRequisites}
+This must be the longest list of pre-requisites I've seen in a post, let-alone a post I wrote, but it's all of the things you need to get going on Fedora Linux *version 37 at the time of writing this*.
+
 # The Material {#Material}
 I didn't set out to follow a tutorial, but I absolutely had to, and everyone recommended [Brendan Galea's Vulkan Game Engine Tutorial] over the last few months of casually looking into this. I decided that it was going to be the quickest way to get up and running in a manner that would allow me to continue learning and would align with my overall plans for Vulkan, which is to incorporate it into an game engine for myself to learn with.
 
 I'm going to use Brendan's tutorial as reference for some of the points I talk about, but mostly I'm going to make his process more specific to Linux and even more specifically Fedora. Fedora makes for a great workstation, so that's where I've been spending my last few months.
 
+# Download These And Make Edits Accordingly {#Download}
+
 He has 4 files hosted that you'll need to download and follow his short instructions on what to change in those files, these links will take you to the timestamp in the videos, as well as to the download location within the description of the videos.
 
-* [lve_device.cpp & lve_device.hpp]()
-* [lve_swap_chain.cpp & lve_swap_chain.hpp]()
+* [lve_device.cpp & lve_device.hpp](https://www.youtube.com/watch?v=LYKlEIzGmW4&t=94s)
+* [lve_swap_chain.cpp & lve_swap_chain.hpp](https://www.youtube.com/watch?v=IUYH74MqxOA&t=194s)
 
 ---
-
-# Pre-requisites {#PreRequisites}
-This must be the longest list of pre-requisites I've seen in a post, let-alone a post I wrote, but it's all of the things you need to get going on Fedora Linux *version 37 at the time of writing this*.
 
 # VulkanSDK {#VulkanSDK}
 The biggest thing to get going up front is to [Download the VulkanSDK](https://vulkan.lunarg.com/sdk/home#linux) and get it properly set up in your environment for use with `glslc`.
@@ -62,7 +95,7 @@ export PATH="$VULKAN_SDK/bin:$PATH"
 ```
 Run those in your terminal to add them temporarily, or add them to your `~/.bashrc` or `~/.bash_profile` or somewhere else you can think of.
 
-Next up the solution that [Fish Shell]() users have to live with:
+Next up the solution that [Fish Shell](https://fishshell.com/) users have to live with:
 ```bash
 set -gx VULKAN_SDK "/home/USERNAME/VulkanSDK/1.3.236.0/x86_64/"
 fish_add_path $VULKAN_SDK/bin/
@@ -232,11 +265,11 @@ int main()
 
 ![Starting-Line](images/starting-line.png)
 
-[SPIR-V]() is the format that Vulkan expects for our shaders which is why we had to download VulkanSDK and get `glslc` added to the path
+[SPIR-V](https://www.khronos.org/spir/) is the format that Vulkan expects for our shaders which is why we had to download VulkanSDK and get `glslc` added to the path
 The `CMakeLists.txt` sets up everything our project will need  
 and the `main.cpp` file utilizes GLFW to create a Window and logs the number of extensions supported by `vkEnumerateInstanceExtensionProperties`  
 which in my case is `20 extensions supported` and is the only use for this file.  
-Since the purpose of this `main.cpp` was to simply test our installation you may now remove all of the code from it and follow along with [Brendan Galea's Vulkan Game Engine Tutorial series on YouTube]()
+Since the purpose of this `main.cpp` was to simply test our installation you may now remove all of the code from it and follow along with [Brendan Galea's Vulkan Game Engine Tutorial series on YouTube](https://www.youtube.com/watch?v=Y9U9IE0gVHA&list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR)
 
 ---
 
@@ -314,7 +347,7 @@ note that we are including `jde_window.hpp` in the header in this file; the head
 
 ---
 
-### The `JdeWindow` Class
+### The `JdeWindow` Class {#JdeWindow}
 
 >"`jde_window.hpp`": is our window class `JdeWindow`, its constructor takes a `w`, `h`, and a `name` which are used to initialize the `width`, `height`, and `name` of the window. We properly handle the available constructors, and the destructor destroys the window and terminates GLFW. The class has *deleted `copy constructor` and copy `assignment operator`*, which means that instances of this class cannot be copied. This is where our `game loop` is requested to terminate. `JdeWindow` has a public method called `shouldClose()`, which returns a bool indicating whether the window has been closed or not. Finally there is also one private method `initWindow()` that actually initializes the window. The private variables store width, height, and the name of the GLFW window.
 ```cpp
@@ -347,7 +380,7 @@ namespace jde {
 }
 ```
 
-### Making Entry in `main.cpp`!
+### Making Entry in `main.cpp`! {#main}
 > We now get to hit the `run()` command we saw very first! This is the `main()` function of the application, which is the entry point of our window! 
 ```cpp
 #include "first_app.hpp"
@@ -371,9 +404,9 @@ int main()
 }
 ```
 
-Our entrypoint creates an instance of our `FirstApp` class, which was defined in `first_app.hpp`, and calls `run()`; which is responsible for executing our main loop aka game loop, which just keeps running as long as the window is open. This loop keeps running as long as the window is open, by `polling` the `events` from the `window`. I like to use the powerful C++ standard when I can and haven't had the opportunity to use *try-catch blocks* in a real-world application yet, so this tutorial has me happy for that. The main function also includes a try-catch block that catches any `exceptions` that are thrown by the `run()` method. If an `exception` is caught, the *error message* is printed to the *standard error output* and the program exits with a `failure` status code `(EXIT_FAILURE)`. If the program exits without an `exception`, it will return a `success` status code `(EXIT_SUCCESS)`.
+Our entrypoint creates an instance of our `FirstApp` class, which was defined in `first_app.hpp`, and calls `run()`; which is responsible for executing our main loop aka game loop, which just keeps running as long as the window is open. This loop keeps running as long as the window is open, by `polling` the `events` from the `window`. I like to use the powerful C++ standard when I can and haven't had the opportunity to use *try-catch blocks* in a real-world application yet, so this tutorial has me happy for that. The main function also includes a try-catch block that catches any *exceptions* that are thrown by the `run()` method. If an `exception` is caught, the *error message* is printed to the *standard error output* and the program exits with the failure status code: `EXIT_FAILURE`; otherwise, if the program exits without an `exception`, it will return the `EXIT_SUCCESS` status code.
 
-# Opening the Window to the World of Vulkan!
+# Opening the Window to the World of Vulkan! {#Open}
 
 Run the following `CMake` command *if you're not using something like Emacs or VS Code*:
 ```bash
@@ -429,18 +462,19 @@ now we can change into the build directory, if you're not already there `cd buil
 
 and with any luck you'll have a fully functional GLFW window that doesn't immediately exit, but also doesn't do anything!
 
-# Unfortunately That Was the Easy Part
+# Unfortunately That Was the Easy Part {#HardPart}
 
 Next we have to build out the entire Vulkan graphics pipeline and an API to interface with the Graphics Card.
 
 ![Brendan-Galea-Graphics-Pipeline-Overview-Vulkan-Game-Engine-Tutorial-02](images/Brendan-Galea-Graphics-Pipeline-Overview-Vulkan-Game-Engine-Tutorial-02.png)  
 - image credit to Brendan Galea - Vulkan Game Engine Tutorial 2
 
-# Directory Structure for the Vulkan Triangle
+# Directory Structure for the Vulkan Triangle {#TriDir}
 
-You'll need to download 4 files
-* [jde_device.cpp & jde_device.hpp]()
-* [jde_swap_chain.cpp & jde_swap_chain.hpp]()
+You'll need to download these 4 files if you haven't grabbed them yet!
+* [lve_device.cpp & lve_device.hpp](https://www.youtube.com/watch?v=LYKlEIzGmW4&t=94s)
+* [lve_swap_chain.cpp & lve_swap_chain.hpp](https://www.youtube.com/watch?v=IUYH74MqxOA&t=194s)
+* *if you watch the section of the video he talks about the edits you will need to make to those files! Basically it comes down to the namespace and the first few letters of the class name, and each method of the class.*
 
 and create 5 more:
 * `glslc.sh`
@@ -449,7 +483,7 @@ and create 5 more:
 * `shaders/simple_shader.frag`
 * `shaders/simple_shader.vert`
 
-my project directory tree AFTER [video #7]():  
+my project directory tree AFTER [video #7](https://youtu.be/_VOR6q3edig?list=PL8327DO66nu9qYVKLDmdLW_84-yE4auCR):  
 
 * the `.spv` are the compiled output from `glslc` which we're getting to soon
 ```txt
@@ -476,7 +510,7 @@ my project directory tree AFTER [video #7]():
 
 ---
 
-# One Nice Thing
+# One Nice Thing About the Shader Chain {#ShaderChain}
 we can really only program two stages of the shader chain in Vulkan, the `Vertex Shader` and the `Fragment Shader`, which are right here:  
 # `src/shaders/simple_shader.frag`
 is our fragment shader, responsible for determining the color of each pixel on the screen.
@@ -513,7 +547,7 @@ It defines an array "positions" of 2D vectors, which represent the coordinates o
 
 ---
 
-# Shaders Are Done
+# Shaders Are Done, Now Let's Compile! {#ShaderCompile}
 
 and that's the last time we'll have to touch those before we get a Triangle on-screen, but that's a ways off still. First we now need to utilize our VulkanSDK to run `glslc`. In the video he uses this script which works just fine in `bash`, so from `fish` I've just been launching a `bash` shell to run this `src/glslc.sh` file:
 ```bash
@@ -551,16 +585,18 @@ I didn't go as far as incorporating the shader compilation step into the `CMakeL
 
 # Toward The TRIANGLE! {#Triangle}
 
-The GLFW window we wrote is about to get Vulkanized, and this page is going to start looking like [GitHub]()!  
+The GLFW window we wrote is about to get Vulkanized, and this page is going to start looking like [GitHub](https://github.com/Jmac217/Vulkan-Starter-Engine)!  
+
+As He Stated in the tutorial, there's a lot of extra boilerplate that gets in the way and does not need to be thought about at this stage. By following the tutorial beyond the point of this triangle example
 
 There are 4 files to download from the tutorial and at very least the namespace will need to be changed to `jde` in those downloads. It's not proper etiquate to link directly to those files, and you should watch those parts of the videos anyway to really see what to change in the files.  
 
-* [lve_device.cpp & lve_device.hpp]()
-* [lve_swap_chain.cpp & lve_swap_chain.hpp]()
+* [lve_device.cpp & lve_device.hpp](https://www.youtube.com/watch?v=LYKlEIzGmW4&t=94s)
+* [lve_swap_chain.cpp & lve_swap_chain.hpp](https://www.youtube.com/watch?v=IUYH74MqxOA&t=194s)
 
 We're jumping right to the Tringle BTW, these next couple of files are the only things we still need!
 
-# The expanded `first_app.hpp` {#FirstTriangle}
+# The expanded `first_app.hpp` {#FirstTriangleHpp}
 ```cpp
 #pragma once
 
@@ -620,7 +656,7 @@ Our `FirstApp` class has a *default* `constructor` and `destructor` and a still 
 * The `drawFrame` method acquires an image from the *swap chain*, and begins and ends the command buffer while submitting to the mailbox queue.
 
 and the accompanying translation unit is rather large:
-# `first_app.cpp` Just Got A Lot Bigger!
+# `first_app.cpp` Just Got A Lot Bigger! {#FirstTriangleCpp}
 ```cpp
 #include "first_app.hpp"
 
@@ -774,7 +810,7 @@ allocates *command buffers* and begins recording them
 acquires an image from the *swap chain*
 begins and ends the *command buffer* and submits it to the mailbox queue
 
-# Vulkan Graphics Pipeline Configuration {#Pipeline}
+# Vulkan Graphics Pipeline Configuration {#PipelineHpp}
 
 # `jde_pipeline.hpp`
 ```cpp
@@ -856,7 +892,7 @@ The class has a member variable `graphicsPipeline` of type `VkPipeline`, which w
 and the massive list of groupings of definitions lie ahead:
 
 
-# `jde_pipeline.cpp`
+# `jde_pipeline.cpp` {#PipelineCpp}
 ```cpp
 #include "jde_pipeline.hpp"
 
@@ -1090,7 +1126,7 @@ The `JdePipeline` class provides an implementation for creating a *graphics pipe
 
 ---
 
-# A New And Improved `jde_window.hpp` Window Class
+# A New And Improved `jde_window.hpp` Window Class {#WindowHpp}
 ```cpp
 #pragma once
 
@@ -1141,7 +1177,7 @@ It has several *private member variables* including *width*, *height*, *windowNa
 
 and the final piece to our triangular puzzle..!
 
-# `jde_window.cpp` 
+# `jde_window.cpp` {#WindowCpp}
 ```cpp
 #include "jde_window.hpp"
 
@@ -1185,7 +1221,7 @@ namespace jde {
 * The `getExtent()` method returns a `VkExtent2D` struct with the width and height of the window.
 * The `createWindowSurface` method creates a `VkSurfaceKHR` for the window by calling `glfwCreateWindowSurface`, passing in the `VkInstance`, the `GLFWwindow`, and a `nullptr` for the allocation callbacks. If the return value is not `VK_SUCCESS`, it throws a runtime error *"failed to create window surface."*
 
-# And Finally Repeat The Build Steps From Before
+# And Finally Repeat The Build Steps From Before {#BuildTriangle}
 Run the following `CMake` command *if you're not using something like Emacs or VS Code*:
 ```bash
 cmake -B ./build -S .
@@ -1230,7 +1266,7 @@ in any case you should see something similar to the following output:
 ```
 the last line says `Built target Vulkan-Starter` is what matters, that's our binary!
 
-# LAUNCH THAT TRIANGLE!
+# LAUNCH THAT TRIANGLE! {#Launch}
 ```bash
 ./build/Vulkan-Starter
 ```
