@@ -55,6 +55,6 @@ paginate = 5
         name = "LinkedIn"
         url = "https://www.linkedin.com/in/jordanelder10/"
       [[languages.en.menu.main]]
-        identifier = "design"
-        name = "Design"
-        url = "/posts/contact-jordan-elder-for-design-services"
+        identifier = "gallery"
+        name = "Gallery"
+        url = "/posts/gallery"
