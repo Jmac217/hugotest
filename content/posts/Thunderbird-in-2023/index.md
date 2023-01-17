@@ -15,7 +15,7 @@ color = "" #color from the theme settings
 
 # More Than A Mail Client
 
-[Thunderbird](https://www.thunderbird.net/) is a powerful, free and open-source email, news, and chat client developed by the [Mozilla Foundation](https://foundation.mozilla.org/). It is available for Windows, Mac, and Linux operating systems and offers a wide range of features and functionalities to help users access their emails, schedule appointments and events, and customize the look and feel of the application.
+[Thunderbird](https://www.thunderbird.net/) is a powerful, free and open-source email, news, and chat client developed by the [Mozilla Foundation](https://foundation.mozilla.org/). It is available for Windows, Mac, and Linux operating systems and offers a wide range of features and functionalities to help users access your emails, schedule appointments and events, and customize the look and feel of the application.
 
 ![mail](images/mail.png)
 
@@ -31,11 +31,11 @@ You can quickly check all of your calendars to see what you have planned for the
 
 ![tasks](images/tasks.png)
 
-Thunderbird's built-in task manager allows users to efficiently manage their tasks and to-do list, by setting due dates, priorities and marking them as complete, making it a useful tool for staying organized and on top of their schedule.
+Thunderbird's built-in task manager allows users to efficiently manage your tasks and to-do list, by setting due dates, priorities and marking them as complete, making it a useful tool for staying organized and on top of your schedule.
 
 ![contacts](images/contacts.png)
 
-The built-in contact system allows you to store and organize information about your contacts, such as their name, email address, phone number, and other details; and allows you to create multiple address books, which can be used to organize your contacts into different groups or categories. For example, you can create separate address books for personal contacts, business contacts, or contacts from a specific project or organization.
+The built-in contact system allows you to store and organize information about your contacts, such as your name, email address, phone number, and other details; and allows you to create multiple address books, which can be used to organize your contacts into different groups or categories. For example, you can create separate address books for personal contacts, business contacts, or contacts from a specific project or organization.
 
 ![rss](images/rss.png)
 
