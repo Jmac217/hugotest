@@ -15,6 +15,9 @@ color = "" #color from the theme settings
 
 Getting started with Kubernetes can be a daunting task, especially for newcomers. This is where Helm comes to smooth out the experience. Referred to as *the package manager for Kubernetes*, Helm aims to simplify the deployment of k8s applications, making it easier for users to harness the full potential of Kubernetes. In this guide I'll jump through the steps I took in gettin acquainted with Helm through the Next Cloud Chart.
 
+> This guide assumes you already have a [Kubernetes](https://k21academy.com/docker-kubernetes/kubernetes-installation-options/) cluster and [Helm](https://helm.sh/docs/helm/helm_install/) installed
+
+
 [Search for the App on __ArtifactHub.io__](https://artifacthub.io/)
 
 ![ArtifactHub Home](images/image.png)
@@ -88,7 +91,7 @@ and I can log in with my user with `admin` and `password` which you should have 
 
 ![NextCloud Dashboard](images/image-8.png)
 
-when you wanna make any changes just edit the yaml file again and run
+when you wanna make any changes just edit the yaml file again and run  
 `helm upgrade my-release nextcloud/nextcloud --values helm/nextcloud/values.yml`
 
 > REMINDER: we didn't attach storage to NextCloud this is for testing purposes only! Your data will not persist across upgrades. Do not stop here if you intend to deploy Next Cloud for real world use.
