@@ -1,0 +1,94 @@
++++
+title = "How To Start Website Development"
+date = "2023-09-18T15:11:46-05:00"
+author = "Jordan"
+authorTwitter = "" #do not include @
+cover = "images/cover.png"
+tags = ["web", "development", "tutorial"]
+keywords = ["web", "development", "tutorial"]
+description = ""
+showFullContent = false
+readingTime = true
+hideComments = false
+color = "" #color from the theme settings
++++
+
+The first time you look at computer code you might stare until you go cross-eyed, but with a little guidance that same mangled text can quickly become a sharp tool for creativity. This introductory guide is something I wish I had when starting out. I hope it can help those with zero experience get started or at least walk away with an understanding of a few concepts found in website development.
+
+`Object`
+
+```js
+const message = {
+    "sentence": "Hello world!"
+}
+```
+
+* **const** - stands for `constant variable` a variable can typically change its value, but a constant variable will not change. 
+
+<hr/>  
+
+`HTML`  
+
+```html
+<div id="webpage">Hello world</div>
+```  
+
+* **div** - stands for `division`, but not like in math, a `div` tag seperates elements in a page.  
+* This div has an `id` attribute we assign the name of "webpage" for use in our upcoming script.  
+* `</div>` - every *tag* in HTML has a `closing tag` represented with the name of the Element with a `/` in front, in our case `</div>`.  
+
+<hr/>  
+
+`Javascript`  
+
+```javascript
+$("#webpage").text(message.sentence);
+```  
+
+* The `$()` is a `jQuery selector` it's a shorthand *selector* for **HTML DOM Elements**, **Classes**, and in our case **IDs**, denoted by the preceeding `#` and our `<div>`'s given name `webpage`.  
+* The `.` following the `$()` is a *chain operator*, which *promises* to execute each following *function* attached, in our case it's `text()` with our **Object** called.  
+* The **Object** is in a format called *Javascript Object Notation* typically shortened to *JSON* which also uses a `.` operator to denote the hierarchical structure we defined before: our `message` variable contains the `sentence` attribute which returns `Hello world!`. 
+
+<hr/>  
+
+`<filename>.html from a web browser`  
+![Open Your File In A Web Browser](images/helloworld.png)
+
+<hr/>
+
+`Putting It All Together!`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-Value Store Example</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body style="background:pink">
+    <!-- HTML -->
+    <div id="webpage">Hello world</div>
+    <script>
+
+        // Object
+        const message = {
+            "sentence": "Hello world!"
+        };
+
+        // Javascript
+        $("#webpage").text(message.sentence);
+
+    </script>
+</body>
+</html>
+```
+* WOW THAT'S A LOT MORE STUFF!
+* Now that you understand the basics and the few things that really mattered in this web page, there's nothing left but to see a real world example such as this.
+* There's a lot here, but one thing to play with is the `style` attribute on the `<body>` tag, start by changing that value and have fun learning!
+* you can copy/paste this code into a file called `hello.html` and open it in your web browser to view. To edit again right click and select `open with` and choose a text editor. I recommend downloading [Microsoft VS Code](https://code.visualstudio.com/download) if you don't have anything but notepad.
+* I also recommend typing all of this block out by hand so you can get a feel for it, but also understand that there is tooling out there such as [Emmet](https://code.visualstudio.com/docs/editor/emmet) that are meant to generate stuff for you later on in your journey~
+* From here check out the [LAMP Stack](https://blog.apilayer.com/lamp-stack-what-is-it-advantages-alternatives-in-2023/)
+* and be sure you have visited [W3C Schools](https://www.w3schools.com/)
+* Happy Hacking!
