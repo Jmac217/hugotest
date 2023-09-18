@@ -49,7 +49,8 @@ $("#webpage").text(message.sentence);
 
 * The `$()` is a `jQuery selector` it's a shorthand *selector* for **HTML DOM Elements**, **Classes**, and in our case **IDs**, denoted by the preceeding `#` and our `<div>`'s given name `webpage`.  
 * The `.` following the `$()` is a *[chain operator](https://www.w3schools.com/jquery/jquery_chaining.asp)*, which *promises* to execute each following *function* attached, in our case it's `text()` with our **Object** called.  
-* The **Object** is in a format called *Javascript Object Notation* typically shortened to *[JSON](https://en.wikipedia.org/wiki/JSON)* which also uses a `.` operator to denote the hierarchical structure we defined before: our `message` variable contains the `sentence` key which returns the `Hello world!` value. This is the essence of [data structures](https://en.wikipedia.org/wiki/Data_structure) in a format called [Key-Value Store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) which will be your bread and butter for all things data going forward.
+* The **Object** is in a format called *Javascript Object Notation* typically shortened to *[JSON](https://en.wikipedia.org/wiki/JSON)* which also uses a `.` operator to denote the hierarchical structure we defined before
+* Our `message` variable contains the `sentence` key which returns the `Hello world!` value to the `<div>` with the ID (`#`) of `webpage` as `text()`. This is the essence of [data structures](https://en.wikipedia.org/wiki/Data_structure) in a format called [Key-Value Store](https://en.wikipedia.org/wiki/Key%E2%80%93value_database) which will be your bread and butter for all things data going forward.
 
 <hr/>  
 
