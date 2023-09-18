@@ -40,7 +40,8 @@ const message = {
 * `</div>` - every *tag* in HTML has a `closing tag` represented with the name of the Element with a `/` in front, in our case `</div>`.  
 
 ### Javascript
-[Javascript](https://en.wikipedia.org/wiki/JavaScript) is what's called a [scripting language](https://en.wikipedia.org/wiki/Scripting_language)
+[Javascript](https://en.wikipedia.org/wiki/JavaScript) is what's called a [scripting language](https://en.wikipedia.org/wiki/Scripting_language)  
+> This example is actually a [subset](https://en.wikipedia.org/wiki/Subset) of Javascript, called a [framework](https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_web_frameworks), named [jQuery](https://en.wikipedia.org/wiki/JQuery). I find it both more efficient and easier to learn Javascript through playing with jQuery, but there are reasons, you'll discover on your own, for pure Javascript and [supersets](https://en.wikipedia.org/wiki/Subset) of Javascript like [Typescript](https://en.wikipedia.org/wiki/TypeScript)
 
 ```javascript
 $("#webpage").text(message.sentence);
