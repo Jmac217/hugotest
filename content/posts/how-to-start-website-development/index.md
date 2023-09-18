@@ -15,7 +15,8 @@ color = "" #color from the theme settings
 
 The first time you look at computer code you might stare until you go cross-eyed, but with a little guidance that same mangled text can quickly become a sharp tool for creativity. This introductory guide is something I wish I had when starting out. I hope it can help those with zero experience get started or at least walk away with an understanding of a few concepts found in website development.
 
-`Object`
+### Object
+an [object](https://www.w3schools.com/js/js_objects.asp) in programming is a collection of data
 
 ```js
 const message = {
@@ -27,7 +28,8 @@ const message = {
 
 <hr/>  
 
-`HTML`  
+### HTML
+[HTML](https://www.w3.org/wiki/Html/Training/What_is_HTML) stands for *Hypertext Markup Language* which is in a class of languages called [Markup Languages](https://en.wikipedia.org/wiki/Markup_language) and it tells Web Browsers what to do with your important website information.
 
 ```html
 <div id="webpage">Hello world</div>
@@ -37,9 +39,8 @@ const message = {
 * This div has an `id` attribute we assign the name of "webpage" for use in our upcoming script.  
 * `</div>` - every *tag* in HTML has a `closing tag` represented with the name of the Element with a `/` in front, in our case `</div>`.  
 
-<hr/>  
-
-`Javascript`  
+### Javascript
+[Javascript](https://en.wikipedia.org/wiki/JavaScript) is what's called a [scripting language](https://en.wikipedia.org/wiki/Scripting_language)
 
 ```javascript
 $("#webpage").text(message.sentence);
